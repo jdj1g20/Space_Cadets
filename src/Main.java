@@ -24,7 +24,7 @@ class Main{
     }
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.println("Input emailID: ");
+        System.out.print("Input emailID: ");
         String emailID = input.nextLine();
         String line = searchLine(emailID);
         System.out.println(searchName(line));
