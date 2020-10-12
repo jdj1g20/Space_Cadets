@@ -11,7 +11,11 @@ class Main{
             URL url = new URL("https://www.ecs.soton.ac.uk/people/" + emailID);
             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
 
-            while (!(line = br.readLine()).contains("property=\"name\"")){
+            while ((line = br.readLine()) != null){
+                System.out.println(line);
+                if(line.contains("property=\"name\"")){
+                    break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
